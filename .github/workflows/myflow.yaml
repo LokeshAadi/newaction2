@@ -5,6 +5,7 @@ on:
       - main
 
 jobs:
+  tf_fmt:
     name: awsinfra
     runs-on: ubuntu-latest
 
