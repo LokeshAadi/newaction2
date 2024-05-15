@@ -1,0 +1,23 @@
+name: my practice terra
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+    name: aws infa through terra 
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2 
+
+      - name: terracommands
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.3.0 
+        run: 
+          terraform init &&
+          terraform validate &&
+          terraform plan &&
+          terraform apply -auto-approve
