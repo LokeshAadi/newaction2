@@ -5,10 +5,9 @@ on:
       - main
 
 jobs:
-  tf_fmt:
-    name: awsinfra
+  
+  awsinfra:
     runs-on: ubuntu-latest
-
     steps: 
       - name: Checkout code
         uses: actions/checkout@v2 
