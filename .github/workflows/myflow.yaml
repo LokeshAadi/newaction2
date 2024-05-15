@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-    name: aws infa through terra 
+    name: awsinfra
     runs-on: ubuntu-latest
 
     steps: 
