@@ -9,7 +9,7 @@ jobs:
   awsinfra:
     runs-on: ubuntu-latest
     steps: 
-      env:
+      
         
         - name: Checkout code
           uses: actions/checkout@v2 
