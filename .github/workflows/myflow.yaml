@@ -9,17 +9,20 @@ jobs:
   awsinfra:
     runs-on: ubuntu-latest
     steps: 
-      - name: Checkout code
-        uses: actions/checkout@v2 
-
-      - name: terracommands
-        uses: hashicorp/terraform/setup-terraform@v4
+      env:
         
-      - name: Terraform Init
-        run: terraform init
+        - name: Checkout code
+          uses: actions/checkout@v2 
 
-      - name: Terraform Validate
-        run: terraform validate
+        - name: terracommands
+          uses: hashicorp/terraform/setup-terraform@v4
+          TF_ACTION_WORKING_DIR: 'terraform'
+        
+        - name: Terraform Init
+          run: terraform init
+
+        - name: Terraform Validate
+          run: terraform validate
 
       - name: Terraform Plan
         run: terraform plan
